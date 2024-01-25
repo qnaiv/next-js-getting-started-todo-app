@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+  main {
+    @apply flex items-center justify-center;
+  }
+
+  .container {
+    @apply w-11/12 md:w-1/2;
+  }
+
+  .input-area {
+    @apply flex items-center justify-between my-2 mb-4;
+
+    input {
+      @apply w-full mr-2 p-2;
+    }
+
+    button {
+      @apply w-16;
+    }
+  }
+
+  .custom-border {
+    @apply border-2 border-gray-300 border-solid rounded;
+  }
+
+  .todo-list {
+    p.title {
+      @apply text-lg font-semibold;
+    }
+  }
+
+  .todo-card {
+    @apply custom-border flex items-center justify-between p-2 mb-2;
+
+    p {
+      @apply break-all;
+    }
+
+    button {
+      @apply w-16;
+    }
+
+  }
+
+  button {
+    @apply bg-slate-50 rounded px-2 py-1 break-keep;
+
+    &.blue-button {
+      @apply bg-sky-600 text-white;
+
+      &:hover {
+        @apply bg-sky-700;
+      }
+    }
+
+    &.button-disabled {
+      @apply bg-slate-100 text-gray-400;
+    }
+
+  }
+}
